@@ -1,0 +1,2 @@
+sys t;
+exp(-t)*sin(t)
