@@ -19,3 +19,6 @@ closed_sysm = feedback(controler*system,1)
 t=0:0.01:2;
 figure()
 step(closed_sysm,t)
+
+
+%% value could be responsive by controlling kp, ki and kd 
