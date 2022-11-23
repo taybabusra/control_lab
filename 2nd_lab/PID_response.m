@@ -22,3 +22,7 @@ step(closed_sysm,t)
 
 
 %% value could be responsive by controlling kp, ki and kd 
+
+kp = 390
+kd = 50
+ki =3500
