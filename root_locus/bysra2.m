@@ -1,0 +1,19 @@
+clc;
+clear all;
+m =1000;
+b=50;
+u =10;
+z0= 0.3;
+p0 =0.03,
+num = [1];
+den=[m b];
+sys = tf(num,den);
+controler = tf([1,z0],[1 p0])
+rlocus(sys*controler)
+axis([-0.6 0 -0.6 0.6])
+sgrid(0.6,0.36)
+[k,poles] = rlocfind(sys*controler)
+sys_cl = feedback(k*sys*controler,1)
+t = 0:0.01:20
+step(u*sys_cl,t)
+axis([0 20 0 10])
